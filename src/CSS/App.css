@@ -1,2 +1,12 @@
 @import-normalize; 
+@import './button.css';
 @import './Recipe-list.css';
+
+html{
+  font-size:25px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
