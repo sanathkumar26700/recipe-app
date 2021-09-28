@@ -4,9 +4,17 @@
     background: none;
     font-weight: bold;
     font-size: inherit;
-    border-radius: 5px;
-    padding: 5px 20px;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.8rem;
     cursor: pointer;
+}
+
+.mr-1{
+    margin-right: 0.4rem;
+}
+
+.mb-1{
+    margin-bottom: 0.4rem;
 }
 
 .btn--primary{
@@ -17,4 +25,14 @@
 
 .btn--primary:hover{
     background-color: hsl(200, 100%, 35%);
+}
+
+.btn--delete{
+    background-color: hsl(0, 100%, 50%);
+    transition: 0.3s;
+}
+
+.btn--delete:hover{
+    background-color: hsl(0, 100%, 35%);
+    transition: 0.3s;
 }

@@ -1,5 +1,7 @@
 @import-normalize; 
 @import './button.css';
+@import'./recipe.css';
+@import './ingredient-list.css';
 @import './Recipe-list.css';
 
 html{
@@ -9,4 +11,10 @@ html{
 body {
   padding: 0;
   margin: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  html{
+  font-size: 11px;
+}
 }

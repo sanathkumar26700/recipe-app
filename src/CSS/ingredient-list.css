@@ -1,0 +1,7 @@
+.ingredientList-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap : 0.2rem;
+    column-gap: 1.5rem;
+    justify-content: flex-start;
+}

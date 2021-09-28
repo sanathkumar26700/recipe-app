@@ -8,7 +8,7 @@ function IngredientsList({ingredients}){
          {...ingredient}/>)
     });
     return (
-        <div>
+        <div className="ingredientList-grid">
             {ingredientsListElements}
         </div>
     )
