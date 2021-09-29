@@ -1,13 +1,17 @@
 import React from 'react'
 import IngredientsList from './IngredientsList';
+import {useContext} from 'react'
+import {RecipeContext} from './App'
 
 function Recipes(props) {
-const { 
-    name,
-    servings, 
-    cookTime,
-    instructions,
-    ingredients} = props;      
+    const {handleRecipeDelete} = useContext(RecipeContext)
+    const { 
+        id,
+        name,
+        servings, 
+        cookTime,
+        instructions,
+        ingredients} = props;      
   
 return (
     <div className="recipe">
@@ -15,7 +19,7 @@ return (
             <h3 className ="recipe__title">{name}</h3>
             <div>
                 <button className="btn btn--primary mr-1 mb-1">Edit</button>
-                <button className="btn btn--delete">Delete</button> 
+                <button className="btn btn--delete" onClick={() => handleRecipeDelete(id)}>Delete</button> 
             </div>
         </div>  
         <div className="recipe__row">
