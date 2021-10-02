@@ -2,6 +2,7 @@ import React ,{useState,useEffect} from 'react';
 import RecipeList from './RecipeList';
 import '../CSS/App.css';
 import {v4 as uuidv4} from 'uuid'
+import RecipeEdit from './Recipe-edit';
 
 export const RecipeContext = React.createContext()
 const LOCAL_STORAGE_KEY = 'recipeapp.recipes'
@@ -49,6 +50,7 @@ function handleRecipeDelete(id){
   return (
     <RecipeContext.Provider value={recipeContextValue}>
     <RecipeList recipes ={recipes}/>
+    <RecipeEdit/>
     </RecipeContext.Provider>
   )
 }
