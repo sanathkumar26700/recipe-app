@@ -3,9 +3,11 @@
 @import'./recipe.css';
 @import './ingredient-list.css';
 @import './Recipe-list.css';
+@import './Recipe-edit.css';
 
-html{
+*{
   font-size:25px;
+  box-sizing: border-box;
 }
 
 body {
