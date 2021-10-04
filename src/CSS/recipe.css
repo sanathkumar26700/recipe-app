@@ -27,6 +27,7 @@
 
 .recipe__label{
     margin-right: 0.4rem;
+    font-weight: bold;
 }
 
 .recipe__value{
