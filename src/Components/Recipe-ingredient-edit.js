@@ -1,10 +1,10 @@
 import React from 'react'
 
-function RecipeIngredientEdit() {
+function RecipeIngredientEdit({recipe}) {
     return (
         <>
-         <input type="text"/>
-         <input type="text"/>
+         <input type="text" value = {recipe.name}/>
+         <input type="text" value = {recipe.amount}/>
          <button className= " btn btn--delete">&times;</button>
         </>
     )

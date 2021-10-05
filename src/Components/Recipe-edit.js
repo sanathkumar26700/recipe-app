@@ -1,7 +1,7 @@
 import React from 'react'
 import RecipeIngredientEdit from './Recipe-ingredient-edit'
 
-function RecipeEdit() {
+function RecipeEdit({recipe}) {
     return (
         <div className="recipe-edit">
             <div className= "recipe-edit__remove-button-container">
@@ -17,6 +17,7 @@ function RecipeEdit() {
                     type="text" 
                     name="name" 
                     id="name"
+                    value={recipe.name}
                     className="recipe-edit__input"
                 />
                 <label 
@@ -28,6 +29,7 @@ function RecipeEdit() {
                     type="text" 
                     name="cookTime" 
                     id="cookTime"
+                    value={recipe.cookTime}
                     className="recipe-edit__input"
                 />                
                 <label 
@@ -39,6 +41,7 @@ function RecipeEdit() {
                     type="text" 
                     name="servings" 
                     id="servings"
+                    value={recipe.servings}
                     className="recipe-edit__input"
                 />
                 <label 
@@ -49,6 +52,7 @@ function RecipeEdit() {
                 <textarea 
                     name="instructions" 
                     id="instructions"
+                    value={recipe.instructions}
                     className= "recipe-edit__input">
                 </textarea>
             </div>
@@ -60,8 +64,7 @@ function RecipeEdit() {
                 <div>Name</div>
                 <div>Amount</div>
                 <div></div>
-                <RecipeIngredientEdit/>
-                <RecipeIngredientEdit/>
+                {recipe.ingredients.map((recipe) => <RecipeIngredientEdit key={recipe.id} recipe = {recipe}/>)}
             </div>
             <div className="recipe-edit__add-ingredient-btn-container">
                 <button className= "btn btn--primary">Add ingredients</button>
