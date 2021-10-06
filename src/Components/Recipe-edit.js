@@ -1,7 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import RecipeIngredientEdit from './Recipe-ingredient-edit'
+import {RecipeContext} from './App'
+
 
 function RecipeEdit({recipe}) {
+    const {handleRecipeChange} = useContext(RecipeContext)
+
+    function handleChange(changes){
+        handleRecipeChange(recipe.id, {...recipe,...changes})
+    }
+
     return (
         <div className="recipe-edit">
             <div className= "recipe-edit__remove-button-container">
@@ -17,8 +25,9 @@ function RecipeEdit({recipe}) {
                     type="text" 
                     name="name" 
                     id="name"
-                    value={recipe.name}
+                    Value ={recipe.name}
                     className="recipe-edit__input"
+                    onInput = {e => handleChange({name: e.target.value })}
                 />
                 <label 
                     htmlFor="cookTime"
