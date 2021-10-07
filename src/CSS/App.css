@@ -4,10 +4,12 @@
 @import './ingredient-list.css';
 @import './Recipe-list.css';
 @import './Recipe-edit.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
   font-size:25px;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
