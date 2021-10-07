@@ -78,38 +78,38 @@ function handleRecipeDelete(id){
 const sampleRecipes = [
   { 
     id: uuidv4(), 
-    name: 'Chicken',
-    servings: 3, 
-    cookTime: '1:45',
-    instructions: "1. put salt\n2. put chicken in oven\n3.eat chicken",
+    name: 'White Sauce Pasta',
+    servings: 2, 
+    cookTime: '15 min',
+    instructions: "1. Boil raw pasta in water\n2. Add 1/2 teaspoon salt\n3. Boil them until al-dente",
     ingredients : [{
       id: uuidv4(),
-      name: "chicken",
-      amount: "2kg"
+      name: "Penne Pasta",
+      amount: "3/4 cups"
     },{
       id: uuidv4(),
-      name: "Garam masala",
+      name: "Water",
       amount: "4 teaspoon"
     },{
       id: uuidv4(),
       name: "salt",
-      amount: "2 teaspoon"
+      amount: "1/2 teaspoon"
     }]       
   },
   {
     id: uuidv4(), 
-    name: 'Chicken kurma',
-    servings: 4, 
-    cookTime: '2:00',
+    name: 'Potato Sandwich',
+    servings: 2, 
+    cookTime: '20 min',
     instructions: "1. put salt\n2. put chicken in oven\n3.eat chicken",
     ingredients : [{
       id: uuidv4(),
-      name: "chicken",
-      amount: "1kg"
+      name: "Potato",
+      amount: "300 gm"
     },{
       id: uuidv4(),
-      name: "Salt",
-      amount: "2 teaspoon"
+      name: "Bread",
+      amount: "8 Slices"
     }]        
   }
 ]
