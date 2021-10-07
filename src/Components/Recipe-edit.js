@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import RecipeIngredientEdit from './Recipe-ingredient-edit'
 import {RecipeContext} from './App'
-
+import {v4 as uuidv4} from 'uuid'
 
 function RecipeEdit({recipe}) {
     const {handleRecipeChange, handleRecipeSelect} = useContext(RecipeContext)
@@ -15,6 +15,20 @@ function RecipeEdit({recipe}) {
         const index = newIngredients.findIndex(i => i.id === id)
         newIngredients[index] = ingredient
         handleChange({ingredients : newIngredients})
+    }
+
+    function handleIngredientAdd(){
+        const newIngredients = {
+            id: uuidv4(),
+            name: "",
+            amount: ""
+          }
+        handleChange({ingredients : [...recipe.ingredients,newIngredients]})
+    }
+
+    
+    function handleIngredientDelete(id){
+        handleChange({ingredients : recipe.ingredients.filter(i => i.id !== id)})
     }
 
     return (
@@ -90,11 +104,16 @@ function RecipeEdit({recipe}) {
                 <div></div>
                 {recipe.ingredients.map((recipe) => <RecipeIngredientEdit
                 handleIngredientChange = {handleIngredientChange}
+                handleIngredientDelete = {handleIngredientDelete}
                 key={recipe.id}
                 recipe = {recipe}/>)}
             </div>
             <div className="recipe-edit__add-ingredient-btn-container">
-                <button className= "btn btn--primary">Add ingredients</button>
+                <button 
+                    onClick = {() => handleIngredientAdd()}
+                    className= "btn btn--primary">
+                    Add ingredients
+                </button>
             </div>
         </div>
     )
