@@ -32,7 +32,7 @@ function App() {
 
   function handleRecipeChange(id, recipe){
     const newRecipes = [...recipes]
-    const index = newRecipes.indexOf(r => r.id === id)
+    const index = newRecipes.findIndex(r => r.id === id)
     newRecipes[index] = recipe
     setRecipes(newRecipes)
   }
@@ -44,17 +44,17 @@ function App() {
   function handleRecipeAdd(){
     const newRecipe = {
         id: uuidv4(), 
-        name: 'Sambar',
-        servings: 10, 
-        instructions: "1. put salt\n2. Vegetables\n3.Add Masala",
+        name: '',
+        servings: 1, 
+        instructions: "",
         ingredients : [{
           id: uuidv4(),
-          name: "Tomato",
-          amount: "500 g"
+          name: "",
+          amount: ""
         },{
           id: uuidv4(),
-          name: "Garam masala",
-          amount: "2 teaspoon"
+          name: "",
+          amount: ""
         }]
       }
     setRecipes([...recipes,newRecipe])
